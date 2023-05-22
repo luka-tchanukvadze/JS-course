@@ -1,0 +1,142 @@
+<!-- 
+JSON - javascript object notation
+-different syntax
+-similar to javascript object
+-but less feautures
+
+all properties must use "" not ''
+does not support functions
+
++can be understood in almost all programming languages
+
+stores data
+
+built-in JSON object
+convert:
+javascript object to JSON
+
+JSON.stringify(product2)
+-->
+
+
+
+<!-- 
+  localStorage - save values more permanently.
+variables are temporary(if we refresh/close the page, all the varaibles are deleted)
+
+localStorage only supports strings 
+- (localStorage.setItem('message', 'hello')
+ ... console.log(localStorage.getItem('message')))
+
+  -->
+
+
+  <!-- 
+    null vs undefined
+    null = intentionally want something to be empty
+   -->
+
+
+<!-- 
+   auto-boxing
+  -->
+
+  <!-- 
+    objects are references 
+    =====
+
+    destructuring, shorthand property
+  -->
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+  </head>
+  
+  <body>
+     
+  
+  
+    <script>
+  /*
+      const product2 = {
+        name: 'shirt',
+        rating: {
+          stars: 4.5,
+          count: 87
+        },
+        fun: function function1(){
+          console.log('something')
+        }
+      }
+      console.log(product2)
+      console.log(product2.rating.count)
+  
+      console.log(JSON.stringify(product2))
+  
+      const jsonSting = JSON.stringify(product2)
+      console.log(JSON.parse(jsonSting))
+    */
+   
+    console.log('hello'.length)
+    console.log('hello'.toLocaleUpperCase())
+  
+    const object1 = {
+      message: 'hello'
+    }
+  // we do not copy. refrenecess. you can change a value into a object
+    const object2 = object1
+  
+    object1.message = 'good job'
+    console.log(object1)
+    console.log(object2)
+  
+  
+    const object3 = {
+      message: 'good job'
+    }
+  
+    console.log(object3 === object1)
+    console.log(object2 === object1)
+  
+  
+    //shorcuts for objects
+    // destructuring
+  
+    const object4 = {
+      message: 'good job',
+      price: 555
+    }
+    // const message = object4.message
+    const { message, price } = object4
+    console.log(message)
+    console.log(price)
+  
+  
+    const object5 = {
+      // message: message
+      message,
+  
+      // shorthand property
+      // method: function function1(){
+      //   console.log('method')
+      // }
+  
+      method(){
+        console.log('method')
+      }
+    }
+  
+  
+  
+    console.log('----------------')
+    console.log(object5)
+    object5.method()
+  
+    </script>
+  </body>
+  </html>
